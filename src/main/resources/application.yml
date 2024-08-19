@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: "LimitServise"
+
+  flyway:
+    detectEncoding: true
+    encoding: ISO_8859_1
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/limits
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: none
+    open-in-view: false
+
+service:
+  daylimit: 10000
+
