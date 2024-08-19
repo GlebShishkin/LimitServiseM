@@ -94,7 +94,7 @@ public class UserLimitServise/* implements CommandLineRunner*/ {
         calendar.set(Calendar.MILLISECOND, 0);
 
 //        taskScheduler.scheduleAtFixedRate(new RunnableTask("Update user limits"), new Date(), 10000);   // тестовый прогон
-        taskScheduler.scheduleAtFixedRate(new RunnableTask("Update user limits"), calendar.getTime(), 60*60*24);
+        taskScheduler.scheduleAtFixedRate(new RunnableTask("Update user limits"), calendar.getTime(), 86400000);
     }
 
     class RunnableTask implements Runnable {
